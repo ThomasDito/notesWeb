@@ -10,7 +10,7 @@ This website is one of my personal learning projects, and you are very welcome t
 
 ## Clone the repository
 ```
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/ThomasDito/notesWeb.git
 cd your-repo-name
 npm install
 npm run dev
