@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Notes from "./pages/Notes";
 import MainHeader from "./components/mainHeader";
-import Note from "./components/Note";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [modalToggleState, setModalToggle] = useState(false);
@@ -16,12 +16,19 @@ function App() {
   }
 
   return (
-    <div>
-      <MainHeader onCreatePost={showModalHandler} />
-      <div>
-        <Notes modalToggle={modalToggleState} cancelModal={hideModalHandler} />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <div>
+            <MainHeader onCreatePost={showModalHandler} />
+            <div>
+              <Notes modalToggle={modalToggleState} cancelModal={hideModalHandler} />
+            </div>
+          </div>
+        } />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 

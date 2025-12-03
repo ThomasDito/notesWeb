@@ -8,7 +8,7 @@ function Notes(props) {
     const [notes, setNotes] = useState([]);
 
     function addNoteHandler(noteData) {
-    setNotes((notes) => [noteData, ...notes]);
+        setNotes((notes) => [noteData, ...notes]);
     }
 
     return (
