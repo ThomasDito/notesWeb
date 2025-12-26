@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Notes from "./pages/Notes";
-import MainHeader from "./components/mainHeader";
+import MainHeader from "./components/MainHeader";
 import NotFound from "./pages/NotFound";
 
 function App() {
